@@ -1,15 +1,15 @@
-drop database if exists todo;
+drop database if exists shoppinglist;
 
-create database todo;
+create database shoppinglist;
 
-use todo;
+use shoppinglist;
 
-create table task (
+create table item (
     id int primary key auto_increment,
-    description text not null
+    description varchar(255) not null,
+    amount smallint unsigned not null    
 );
 
-insert into task (description) values('Test task')
-insert into task (description) values('Another test task');
+insert into item (description,amount) values ('Test item',1);
 
 
