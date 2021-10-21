@@ -3,6 +3,7 @@ require_once 'inc/functions.php';
 require_once 'inc/headers.php';
 
 $input = json_decode(file_get_contents('php://input'));
+$id = filter_var($input->id,FILTER_SANITIZE_NUMBER_INT);
 $description = filter_var($input->description,FILTER_SANITIZE_STRING);
 $amount = filter_var($input->amount,FILTER_SANITIZE_NUMBER_INT);
 
